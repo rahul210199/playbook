@@ -9,5 +9,5 @@
     - name: start anaconda
       service:
         name: anaconda
-        enabled: fase
+        enabled: false
         
