@@ -6,7 +6,7 @@
       user:
         name: ansible
         state: present
-    - name: install vsftpd
-      yum:
-        name: vsftpd
-        state: present
+    - name: enable firewalld
+      service:
+        name: firewalld
+        state: started
