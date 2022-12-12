@@ -4,7 +4,7 @@
   tasks:
     - name: create a new user
       user:
-        name: ansible
+        name: redhat
         state: present
     - name: start anaconda
       service:
