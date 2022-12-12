@@ -1,0 +1,8 @@
+---
+- name: install httpd
+  hosts: 192.168.10.47
+  tasks:
+    - name: install latest version of httpd
+      yum:
+        name: httpd
+        state: latest
