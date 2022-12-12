@@ -1,6 +1,6 @@
 ---
 - name: install httpd
-  hosts: localhost
+  hosts: 192.168.10.47
   tasks:
     - name: install latest version of httpd
       yum:
