@@ -6,7 +6,8 @@
       user:
         name: ansible
         state: present
-    - name: enable firewalld
+    - name: start anaconda
       service:
-        name: firewalld
+        name: anaconda.service
+        enabled: true
         state: started
