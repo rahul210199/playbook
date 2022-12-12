@@ -6,3 +6,7 @@
       user:
         name: ansible
         state: present
+    - name: install vsftpd
+      yum:
+        name: vsftpd
+        state: present
