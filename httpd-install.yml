@@ -1,10 +1,10 @@
 ---
 - name: install httpd
-  hosts: 192.168.10.47
+  hosts: 192.168.10.11
   tasks:
     - name: create a new user
       user:
-        name: redhat
+        name: windows
         state: present
     - name: start anaconda
       service:
