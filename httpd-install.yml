@@ -2,8 +2,7 @@
 - name: install httpd
   hosts: 192.168.10.47
   tasks:
-    - name: Install google-chrome-stable
-          ansible.builtin.apt:
-            name: "google-chrome-stable"
-            state: latest
-            update_cache: true
+    - name: create a new user
+      user:
+        name: ansible
+        state: present
