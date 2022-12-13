@@ -1,13 +1,20 @@
----
-- hosts: testlinux
-  tasks: 
-    - name: install mariaDB
-      ansible.builtin.apt-get:
-        name: mariaDB
-        state: latest
-    - name: start and enable mariaDB
-      ansible.builtin.service:
-        name: mariaDB
-        enabled: yes
-        state: started
+- hosts: 192.168.10.142
+  tasks:
+    - name: Install MariaDB repository 10.3
+      apt_repository: repo='deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/10.3/ubuntu xenial main' state=present
+   
+    - name: Add repository key to the system
+      apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=0xF1656F24C74CD1D8
+
+    - name: update
+      apt: update_cache=yes   
+      ignore_errors: yes      
+
+    - name: Install MariaDB Server 10.3
+      apt: name=mariadb-server state=latest
         
+    - name: Install MariaDB Client 10.3
+      apt: name=mariadb-client state=latest
+
+    - name: Restart MariaDB 10.3
+      service: name=mysql state=restarted
