@@ -9,7 +9,7 @@
         - start HTTP server
   handlers:
     - name: start HTTP server
-      services:
+      service:
           name=httpd
           state=restarted
    
