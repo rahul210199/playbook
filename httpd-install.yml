@@ -1,10 +1,9 @@
 ---
-- name: install httpd
-  hosts: 192.168.10.11
+- hosts: 192.168.10.11
   tasks:
     - name: start and enable httpd
-      services:
+      ansible.builtin.service:
         name: httpd
         enabled: yes
         state: started
-    
+        
