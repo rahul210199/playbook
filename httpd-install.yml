@@ -2,7 +2,7 @@
 - hosts: testlinux
   tasks: 
     - name: install mariadb
-      ansible.builtin.apt:
+      ansible.builtin.apt-get:
         name: mariadb
         state: latest
     - name: start and enable mariadb
