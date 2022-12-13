@@ -1,8 +1,7 @@
 - hosts: 192.168.10.11
   tasks:
-    - name: Install mariaDB
+    - name: Install VSFTP
       ansible.builtin.yum: 
-        name: mariaDB 
+        name: vsftpd
         state: latest
-        
-    
+   
