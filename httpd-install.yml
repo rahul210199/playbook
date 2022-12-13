@@ -3,7 +3,10 @@
   hosts: 192.168.10.11
   tasks:
     - name: install apache HTTP server  
-      yum: name=httpd update_cache=yes state=latest
+      yum: 
+        name=httpd 
+        update_cache=yes 
+        state=latest
     - name: start and enable
       services:
         name: httpd
