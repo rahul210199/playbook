@@ -4,10 +4,7 @@
   tasks:
     - name: create a new user
       user:
-        name: windows
+        name: lokesh
         state: present
-    - name: start anaconda
-      service:
-        name: anaconda
-        enabled: false
+   
         
