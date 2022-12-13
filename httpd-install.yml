@@ -1,6 +1,10 @@
 ---
 - hosts: 192.168.10.11
   tasks:
+    - name: install httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: latest
     - name: start and enable httpd
       ansible.builtin.service:
         name: httpd
