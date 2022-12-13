@@ -3,5 +3,5 @@
   hosts: all
   tasks:
     - name: install apache HTTP server  
-      yum: name=nginx update_cache=yes state=latest
+      yum: name=httpd update_cache=yes state=latest
     
