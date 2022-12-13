@@ -1,6 +1,8 @@
 - hosts: 192.168.10.142
   tasks:
     - name: Install Apache2
-      apt: name=Apache2 state=latest
+      ansible.builtin.apt: 
+        name=Apache2 
+        state=latest
         
     
