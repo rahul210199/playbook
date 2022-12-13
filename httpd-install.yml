@@ -3,14 +3,14 @@
   hosts: all
   become: true
   tasks:
-    - name: install apache HTTPD  
+    - name: install apache HTTP server  
       yum: name=httpd update_cache=yes state=latest
       notify:
-        - start http server
+        - start HTTP server
   handlers:
-    - name: start http server
+    - name: start HTTP server
       services:
-        name=httpd
-        state=restarted
+          name=httpd
+          state=restarted
    
         
