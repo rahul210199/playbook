@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.10.11
+- hosts: testlinux
   tasks:
     - name: install httpd
       ansible.builtin.yum:
