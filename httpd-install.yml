@@ -1,6 +1,6 @@
 ---
 - name: install httpd
-  hosts: 192.168.10.11
+  hosts: ansiblegroup
   tasks:
     - name: create a new user
       user:
