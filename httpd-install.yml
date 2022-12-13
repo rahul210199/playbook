@@ -1,10 +1,16 @@
 ---
 - name: install httpd
-  hosts: ansiblegroup
+  hosts: all
+  become: true
   tasks:
-    - name: create a new user
-      user:
-        name: lokesh
-        state: present
+    - name: install apache HTTPD  
+      yum: name=httpd update_cache=yes state=latest
+      notify:
+        - start http server
+  handlers:
+    - name: start http server
+      services:
+        name=httpd
+        state=restarted
    
         
