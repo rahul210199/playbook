@@ -1,14 +1,13 @@
 ---
 - hosts: testlinux
-  become: yes
-  tasks:
-    - name: install httpd
-      ansible.builtin.yum:
-        name: httpd
+  tasks: 
+    - name: install mariadb
+      ansible.builtin.apt:
+        name: mariadb
         state: latest
-    - name: start and enable httpd
+    - name: start and enable mariadb
       ansible.builtin.service:
-        name: httpd
+        name: mariadb
         enabled: yes
         state: started
         
