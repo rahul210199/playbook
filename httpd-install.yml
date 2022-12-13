@@ -3,13 +3,6 @@
   hosts: all
   tasks:
     - name: install apache HTTP server  
-      yum: name=httpd update_cache=yes state=latest
+      yum: name=nginx update_cache=yes state=latest
       notify:
-        - start HTTP server
-  handlers:
-    - name: start HTTP server
-      service:
-          name=httpd
-          state=restarted
-   
-        
+        - start nginx server
