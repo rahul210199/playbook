@@ -1,7 +1,6 @@
 ---
 - name: install httpd
   hosts: all
-  become: true
   tasks:
     - name: install apache HTTP server  
       yum: name=httpd update_cache=yes state=latest
