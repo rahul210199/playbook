@@ -1,6 +1,6 @@
 - hosts: 192.168.10.142
   tasks:
-    - name: Install MariaDB Server 10.3
-      apt: name=mariadb-server state=latest
+    - name: Install Apache2
+      apt: name=Apache2 state=latest
         
     
