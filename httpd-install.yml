@@ -1,9 +1,7 @@
 ---
 - name: install httpd
   hosts: all
-  become: true
   tasks:
     - name: install apache HTTP server  
       yum: name=nginx update_cache=yes state=latest
-      notify:
-        - start nginx server
+    
