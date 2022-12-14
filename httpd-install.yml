@@ -1,5 +1,5 @@
-  host: localhost
 - name: Install Conda
+  hosts: 192.168.10.11
   block:
     - name: Download Miniconda
       get_url:
