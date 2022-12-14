@@ -1,4 +1,4 @@
-  host: 192.168.10.11
+  host: localhost
 - name: Install Conda
   block:
     - name: Download Miniconda
