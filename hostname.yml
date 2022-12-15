@@ -1,11 +1,7 @@
 ---
-- hosts: linux
+- hosts: 192.168.10.142
   tasks:
-    - name: Ensure postgresql is at the latest version
-      ansible.builtin.yum:
-        name: postgresql
+    - name: update system
+      apt:
+        name: "*"
         state: latest
-    - name: Ensure that postgresql is started
-      ansible.builtin.service:
-        name: postgresql
-        state: started
