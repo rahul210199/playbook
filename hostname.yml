@@ -1,5 +1,4 @@
 ---
-     
 - hosts: 192.168.10.46
   tasks:
     - name: Ensure postgresql is at the latest version
