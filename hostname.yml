@@ -3,4 +3,4 @@
   tasks:
     - name: display the config
       debug:
-        msg: "The hostname is {{ ansible_hostname }} and the OS is {{ ansible_version }} and architecture is {{ ansible_architecture }} and ip {{ ansible_ipv4_address }}"
+        msg: "The hostname is {{ ansible_hostname }} and the OS is {{ ansible_version }} and architecture is {{ ansible_architecture }} and ip {{ ansible_all_ipv4_addresses }}"
