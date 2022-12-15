@@ -4,23 +4,23 @@
     - name: display the config
       debug:
         msg: "The hostname is {{ ansible_hostname }} and the OS is {{ ansible_version }} and architecture is {{ ansible_architecture }} and ip {{ ansible_all_ipv4_addresses }}"
-    - name: Ensure postgresql is at the latest version
+    - name: Ensure HTTPD is at the latest version
       ansible.builtin.yum:
-        name: postgresql10-server
+        name: HTTPD
         state: latest
-    - name: Ensure that postgresql is started
+    - name: Ensure that HTTPD is started
       ansible.builtin.service:
-        name: postgresql10
+        name: HTTPD
         state: started
         
 - hosts: 192.168.10.142
   tasks:
-    - name: Ensure postgresql is at the latest version 
+    - name: Ensure apache2 is at the latest version 
       ansible.builtin.apt:
-        name: postgresql
+        name: apache2
         state: latest
-    - name: enable and start the postgresql
+    - name: enable and start the apache
       ansible.builtin.service:
-        name: postgresql
+        name: apache2
         enabled: true
         state: started
