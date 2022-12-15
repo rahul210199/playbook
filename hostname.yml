@@ -1,10 +1,26 @@
 ---
-- hosts: linux
+- hosts: 192.168.10.46
   tasks:
     - name: display the config
       debug:
         msg: "The hostname is {{ ansible_hostname }} and the OS is {{ ansible_version }} and architecture is {{ ansible_architecture }} and ip {{ ansible_all_ipv4_addresses }}"
-    - name: update the system
-      yum:
-        name: "*"
+    - name: Ensure postgresql is at the latest version
+      ansible.builtin.yum:
+        name: postgresql
         state: latest
+    - name: Ensure that postgresql is started
+      ansible.builtin.service:
+        name: postgresql
+        state: started
+        
+- hosts: 192.168.10.142
+  tasks:
+    - name: Ensure postgresql is at the latest version 
+      ansible.builtin.yum:
+        name: postgresql
+        state: latest
+    - name: enable and start the postgresql
+      ansible.builtin.apt:
+        name: postgresql
+        enabled: true
+        state: started
