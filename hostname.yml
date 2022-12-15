@@ -1,18 +1,5 @@
 ---
-- hosts: 192.168.10.46
-  tasks:
-    - name: display the config
-      debug:
-        msg: "The hostname is {{ ansible_hostname }} and the OS is {{ ansible_version }} and architecture is {{ ansible_architecture }} and ip {{ ansible_all_ipv4_addresses }}"
-    - name: Ensure HTTPD is at the latest version
-      ansible.builtin.yum:
-        name: HTTPD
-        state: latest
-    - name: Ensure that HTTPD is started
-      ansible.builtin.service:
-        name: HTTPD
-        state: started
-        
+     
 - hosts: 192.168.10.142
   tasks:
     - name: Ensure apache2 is at the latest version 
