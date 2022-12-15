@@ -6,9 +6,9 @@
         name: nginx
         state: latest
         
- - hosts: 192.168.10.142
-   tasks:
-     - name: install nginx
-       apt:
-         name: nginx
-         state: latest
+- hosts: 192.168.10.142
+  tasks:
+    - name: install nginx
+      apt:
+        name: nginx
+        state: latest
