@@ -6,11 +6,11 @@
         msg: "The hostname is {{ ansible_hostname }} and the OS is {{ ansible_version }} and architecture is {{ ansible_architecture }} and ip {{ ansible_all_ipv4_addresses }}"
     - name: Ensure postgresql is at the latest version
       ansible.builtin.yum:
-        name: postgresql
+        name: postgresql10-server
         state: latest
     - name: Ensure that postgresql is started
       ansible.builtin.service:
-        name: postgresql
+        name: postgresql10
         state: started
         
 - hosts: 192.168.10.142
