@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.10.46
+- hosts: linux
   tasks:
     - name: Ensure postgresql is at the latest version
       ansible.builtin.yum:
