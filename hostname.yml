@@ -3,11 +3,11 @@
 - hosts: 192.168.10.142
   tasks:
     - name: Ensure apache2 is at the latest version 
-      ansible.builtin.apt:
+      apt:
         name: apache2
         state: latest
     - name: enable and start the apache
-      ansible.builtin.service:
+      service:
         name: apache2
         enabled: true
         state: started
