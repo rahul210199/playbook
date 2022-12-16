@@ -12,8 +12,8 @@
       file:
         path: /opt/miniconda3
         state: directory
-        owner: ubuntu
-        mode: 755
+        owner: akshara
+        mode: 0755
         recurse: yes
     - name: Run the installer
       shell: /tmp/install-miniconda.sh -b -u -p /opt/miniconda3
